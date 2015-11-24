@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+  <style>
+  
+  
+	.hiddenBtns{
+		display:none
+	}
+  
+ 
+  </style>
+  <link rel="stylesheet" href="lib/bootstrap.css">
+  <link rel="shortcut icon" href="watchicon.ico">
+  <script src="lib/jquery.js"></script>
+  <script src="lib/bootstrap.js"></script>
+    <title>Watch</title>
+	
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <button class="btn btn-default" id="back">  Back</button> 
+	
+	<button class="btn btn-default pull-right" id="next">Next</button>
+	<input id="url" class="form-control" placeholder="https://www.youtube.com/watch?v=JYtYCNkR1Yo" />
+	
+	
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/JYtYCNkR1Yo" frameborder="0" allowfullscreen id="frame"></iframe>
+    
+	<div class="text-right">
+		<a class="menu " href="#">More</a>
+	</div>
+	<div class="hiddenBtns">
+			<button class="btn btn-default" id="copy">Copy URL</button>
+			
+			<button class="btn btn-default pull-right" id="clear">Clear</button>
+			<button class="btn btn-default pull-right" id="remove">Remove URL</button>
+	</div>
+	
+  </body>
