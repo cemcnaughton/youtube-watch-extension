@@ -10,7 +10,12 @@ function setURLToVideo(url){
 }
 
 function saveURl(url){
-	localStorage['url'] = url;
+	if(url){
+		localStorage['url'] = url;
+	}
+	else{
+		return
+	}
 	if(urls.indexOf(url)==-1){
 		urls.push(url);
 		localStorage['urls'] = JSON.stringify(urls.slice(0,100));
@@ -44,7 +49,7 @@ function checkButtons(){
 	}else{
 		nextButtonDisplay = true
 	}
-	if(index == 0){
+	if(index <= 0){
 		backButtonDisplay = false;
 	}else{
 		backButtonDisplay =  true;
@@ -190,6 +195,7 @@ function copyToClipboard(text) {
 
 
 $(document).ready(function(){
+	debugger
 	loadUrls();
 	checkButtons();
 	setButtonListeners();
